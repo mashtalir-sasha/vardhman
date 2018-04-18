@@ -1,0 +1,535 @@
+.scrollTop
+	cursor: pointer
+	position: fixed
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	z-index: 2
+	border-radius: 50%
+	background-color: $accent
+	box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 10px
+		left: 10px
+		background-image: url(../img/arrow_top.svg)
+		background-size: 30px 30px
+		background-repeat: no-repeat
+
+.head
+	padding-top: 125px
+	position: relative
+	&__ttl
+		font-size: 30px
+		font-family: $head-font
+		color: #fff
+		margin: 60px 0 30px
+	&__txt
+		font-size: 14px
+		line-height: 1.5
+		color: #fff
+		margin-bottom: 30px
+	&__btn
+		outline: none
+		display: table
+		padding: 13px 40px
+		border-radius: 22px
+		font-size: 14px
+		color: #fff
+		background-color: $accent
+		box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+
+.head-slider
+	&__slide
+		min-height: 550px
+		outline: none
+		&_s1
+			background: url(../img/slider_bg1.png) top center no-repeat
+		&_s2
+			background: url(../img/slider_bg2.png) top center no-repeat
+		&_s3
+			background: url(../img/slider_bg3.png) top center no-repeat
+		&_s4
+			background: url(../img/slider_bg4.png) top center no-repeat
+		&_s5
+			background: url(../img/slider_bg5.png) top center no-repeat
+
+.mouse
+	width: 36px
+	height: 36px
+	background-image: url(../img/mouse.svg)
+	position: absolute
+	bottom: 90px
+	left: 50%
+	margin-left: -18px
+	z-index: 2
+
+.arr-left
+	cursor: pointer
+	width: 32px
+	height: 32px
+	background-image: url(../img/arr_left.svg)
+	position: absolute
+	bottom: 140px
+	left: 50%
+	margin-left: -570px
+	z-index: 2
+
+.arr-right
+	cursor: pointer
+	width: 32px
+	height: 32px
+	background-image: url(../img/arr_right.svg)
+	position: absolute
+	bottom: 140px
+	left: 50%
+	margin-left: -520px
+	z-index: 2
+
+.tab 
+	display: none
+
+.tab.show
+	display: block
+	animation: fadeEffect 1s
+	animation-duration: .8s
+
+.mob-mnu__list
+@keyframes fadeEffect
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+.main-product
+	padding: 35px 0
+	&__img
+		float: left
+		cursor: pointer
+		transition: all ease .3s
+		&.big
+			width: 300px
+			height: 300px
+		&.mini
+			width: 163px
+			height: 163px
+			margin: 68px 0
+	&__arrow
+		float: left
+		margin: 135px 0
+		width: 28px
+		height: 29px
+		background-image: url(../img/arrow.png)
+	&__ttl
+		margin: 60px 0 30px
+		font-family: $title-font
+		font-size: 36px
+		color: $accent
+	&__txt
+		font-size: 18px
+		strong
+			font-family: OpenSans-Semibold
+	&__line
+		padding: 15px 0
+		background-color: #9ad5ff
+		&_tab2
+			background-color: #95c23f
+	&__item
+		min-width: 170px
+		display: inline-block
+		margin: 0 34px
+		&_i1
+			&:first-child
+				margin-left: 0
+			&:last-child
+			margin-right: 0
+		&_i2
+			margin: 0 132px
+	&__ico
+		display: block
+		margin: 0 auto
+	&__info
+		font-size: 18px
+		color: #fff
+		text-align: center
+
+.products
+	position: relative
+	padding: 35px 0
+	&__ttl
+		font-family: $title-font
+		font-size: 36px
+		color: $accent
+		text-align: center
+		margin-bottom: 60px
+	&__name
+		font-family: OpenSans-Extrabold
+		font-size: 30px
+		color: $accent
+		margin-bottom: 20px
+	&__info
+		font-family: OpenSans-Semibold
+		color: $accent
+		margin-bottom: 20px
+	&__txt
+		font-family: $title-font
+		color: $accent
+		margin-bottom: 40px
+
+.top-goods
+	.slick-slide
+		outline: none
+	.slick-dots
+		margin: 0 auto
+		li
+			button
+				border-color: $accent
+		li.slick-active
+			button
+				background-color: $accent
+
+.flex-viewport
+	width: 264px
+	margin: 0 auto
+	float: left
+
+.flex-control-thumbs
+	float: right
+	width: 45px
+	li
+		width: 100%
+		float: none
+		margin: inherit
+
+.flex-prev, .flex-next
+	display: none !important
+
+.flexslider
+	background-color: transparent
+	border: none
+
+.products-price
+	float: right
+	&__new
+		font-size: 30px
+		color: $accent
+	&__old
+		color: $accent
+		float: right
+		text-decoration: line-through
+
+.cart-block
+	float: right
+	margin-top: 60px
+
+.add-cart
+	display: table
+	float: left
+	border: 1px solid $accent
+	border-radius: 22px
+	padding: 10px 20px
+	overflow: hidden
+	&__numb
+		min-width: 20px
+		text-align: center
+		float: left
+		color: $accent
+		&_l
+			text-align: left
+			cursor: pointer
+		&_r
+			text-align: right
+			cursor: pointer
+
+.order-btn
+	float: left
+	outline: none
+	display: table
+	padding: 13px 40px
+	border-radius: 22px
+	font-size: 14px
+	color: #fff
+	background-color: $accent
+	box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+	margin: 0 20px
+
+.basket-btn
+	display: block
+	float: right
+	padding: 13px 40px
+	border-radius: 22px
+	font-size: 12px
+	color: #fff
+	background-color: rgba($accent, .5)
+
+.problem
+	padding: 35px 0
+	&__ttl
+		font-family: $title-font
+		font-size: 36px
+		color: $accent
+		text-align: center
+		margin-bottom: 60px
+	&__ico
+		display: block
+		margin: 0 auto 20px
+		padding: 5px
+		border: 1px solid $accent
+		border-radius: 50% 50%
+	&__txt
+		font-family: $title-font
+		font-size: 14px
+		text-align: center
+		color: $accent
+
+.triger
+	padding: 35px 0
+	&__txt
+		font-family: $title-font
+		font-size: 18px
+		color: $accent
+		strong
+			font-family: OpenSans-Semibold
+		&_t2
+			background: url(../img/triger2.png) center bottom no-repeat
+			padding-bottom: 420px
+		&_t3
+			background: url(../img/triger3.png) center bottom no-repeat
+			padding-top: 42px
+			padding-right: 100px
+		&_t4
+			margin-bottom: 30px
+	&__img1
+		margin-bottom: 30px
+
+.triger3__ico
+	display: inline-block
+	margin: 50px 15px
+
+@import "_contacts"
+
+@media only screen and (max-width : 1199px)
+	.head
+		padding-top: 115px
+	.dropdown
+		max-width: 67px
+		float: right
+	.arr-left
+		left: 15px
+		bottom: 110px
+		margin-left: 0
+	.arr-right
+		left: 65px
+		bottom: 110px
+		margin-left: 0
+	.main-product
+		&__img
+			&.mini
+				width: 132px
+				height: 132px
+			&.big
+				width: 295px
+				height: 295px
+		&__arrow
+			margin: 119px 0
+		&__line
+			margin-top: 30px
+		&__item
+			min-width: 157px
+			&_i2
+				margin: 0 82px
+	.flex-viewport
+		width: 240px
+	.flex-control-thumbs
+		width: 40px
+	.products
+		&__txt
+			margin-bottom: 20px
+	.cart-block
+		margin-top: 20px
+	.triger__txt
+		&_t3
+			background-position: top center
+			background-size: contain
+			padding-top: 35px
+			padding-right: 65px
+	.triger3
+		&__ico
+			margin: 50px 6px
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 20px
+	.cprt
+		margin-top: 20px
+
+@media only screen and (max-width : 991px)
+	.nav-mnu
+		&__li
+			margin-right: 25px
+	.head-call
+		padding-left: 0
+		background-image: none
+		&__txt
+			font-size: 12px
+		&__link
+			font-size: 12px
+	.head-slider
+		&__slide
+			background-image: none
+			background-color: #9ad5ff
+			min-height: inherit
+			padding-bottom: 100px
+	.arr-left
+		bottom: 15px
+	.arr-right
+		bottom: 15px
+	.mouse
+		display: none
+	.main-product
+		&__img
+			&.mini
+				width: 80px
+				height: 80px
+				margin: 47px 0
+			&.big
+				width: 174px
+				height: 174px
+		&__arrow
+			margin: 72px 0
+		&__ttl
+			margin-top: 0
+		&__item
+			min-width: 91px
+			&_i2
+				margin: 0 27px
+	.flex-viewport
+		width: 264px
+	.flex-control-thumbs
+		width: 45px
+	.cart-block
+		float: none
+	.order-btn
+		margin-left: 20px
+	.problem
+		&__txt
+			margin-bottom: 30px
+			&.last-sm
+				margin-bottom: 0
+	.triger
+		&__txt
+			&_t3
+				background-position: top right
+				margin-top: 30px
+	.triger3
+		&__ico
+			margin: 50px 60px
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 6px
+				font-size: 12px
+	.top-goods
+		.slick-dots
+			margin-top: 20px
+
+@media only screen and (max-width : 767px) /*640*/
+	.main-nav
+		padding: 10px 0
+		&__logo
+			&_mini
+				margin: 0 auto 10px
+				max-width: 50px
+	.mob-menu
+		&__btn
+			cursor: pointer
+			width: 24px
+			height: 24px
+			background-image: url(../img/menu-button.svg)
+			background-size: 24px 24px
+	.nav-mnu
+		&__li
+			display: block
+			line-height: 1.8
+	.shop-cart
+		float: right
+		margin-right: 10px
+	.head
+		padding-top: 100px
+	.dt
+		display: table
+		margin: 0 auto
+	.main-product
+		&__item
+			min-width: 100%
+			margin-bottom: 15px
+			&_i1
+				margin-left: 0
+			&:last-child
+				margin-bottom: 0
+	.add-cart
+		margin-right: 20px
+	.order-btn
+		margin-top: 15px
+	.problem
+		&__txt
+			&.last-sm
+				margin-bottom: 30px
+			&.last-xs
+				margin-bottom: 0
+	.triger
+		&__img1
+			margin: 0 auto 30px
+		&__txt
+			&_t2
+				padding-bottom: 0
+				background: none
+				margin-top: 30px
+			&_t3
+				padding: 0
+				background: none
+	.triger3
+		&__ico
+			margin: 30px 6px
+	.form-foot
+		&__btn
+			margin-bottom: 30px
+	.tovar-main-img
+		margin: 0 auto
+
+@media only screen and (max-width : 639px) /*320*/
+	.main-product
+		&__ttl
+			font-size: 30px
+	.products
+		&__ttl
+			font-size: 30px
+	.problem
+		&__ttl
+			font-size: 30px
+	.contact
+		&__ttl
+			font-size: 30px
+	.addr-quest
+		&__btn
+			margin-bottom: 30px
+	.basket-btn
+		padding: 13px 25px
+	.vis-min
+		display: block !important
+	.flex-viewport
+		width: 230px
+	.main-product
+		&__item
+			&_i2
+				margin: 0 0 15px
+	.add-cart
+		float: left
+		margin: 0
+	.order-btn
+		float: right
+		margin: 0

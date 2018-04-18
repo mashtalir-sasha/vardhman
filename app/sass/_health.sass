@@ -1,0 +1,132 @@
+.scrollTop
+	cursor: pointer
+	position: fixed
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	z-index: 2
+	border-radius: 50%
+	background-color: $accent
+	box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 10px
+		left: 10px
+		background-image: url(../img/arrow_top.svg)
+		background-size: 30px 30px
+		background-repeat: no-repeat
+
+#content
+	padding-top: 125px
+
+.health-block
+	padding: 35px 0
+	background-color: #fff
+	&:nth-child(2n)
+		background-color: #fbf8fd
+	&__img
+		width: 100%
+		height: 500px
+		background-color: #21272f
+		background-size: cover
+		background-position: center center
+		box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.15)
+		margin-bottom: 7px
+	&__ttl
+		font-family: OpenSans-Extrabold
+		font-size: 30px
+		color: $accent
+		margin-bottom: 40px
+	&__subttl
+		font-family: OpenSans-Semibold
+		font-size: 18px
+		color: #262626
+		margin-bottom: 20px
+	&__txt
+		max-height: 337px
+		padding-right: 15px
+		overflow-y: scroll
+		&::-webkit-scrollbar
+			width: 3px
+			background-color: #ececec
+		&::-webkit-scrollbar-thumb
+			display: block
+			width: 15px
+			background-color: $accent
+
+@media only screen and (max-width : 1199px)
+	.dropdown
+		max-width: 67px
+		float: right
+	.health-block
+		&__img
+			height: 400px
+		&__txt
+			height: 244px
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 20px
+	.cprt
+		margin-top: 20px
+
+@media only screen and (max-width : 991px)
+	.nav-mnu
+		&__li
+			margin-right: 25px
+	.head-call
+		padding-left: 0
+		background-image: none
+		&__txt
+			font-size: 12px
+		&__link
+			font-size: 12px
+	.health-block
+		&__img
+			height: 300px
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 6px
+				font-size: 12px
+
+@media only screen and (max-width : 767px) /*640*/
+	.main-nav
+		padding: 10px 0
+		&__logo
+			&_mini
+				margin: 0 auto 10px
+				max-width: 50px
+	.mob-menu
+		&__btn
+			cursor: pointer
+			width: 24px
+			height: 24px
+			background-image: url(../img/menu-button.svg)
+			background-size: 24px 24px
+	.nav-mnu
+		&__li
+			display: block
+			line-height: 1.8
+	.shop-cart
+		float: right
+		margin-right: 10px
+	.health-block
+		&__img
+			margin-bottom: 30px
+	.form-foot
+		&__btn
+			margin-bottom: 30px
+
+@media only screen and (max-width : 639px) /*320*/
+	.health-block
+		&__ttl
+			font-size: 24px
+		&__subttl
+			font-size: 16px
+		&__txt
+			font-size: 14px	

@@ -1,0 +1,209 @@
+.scrollTop
+	cursor: pointer
+	position: fixed
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	z-index: 2
+	border-radius: 50%
+	background-color: $accent
+	box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 10px
+		left: 10px
+		background-image: url(../img/arrow_top.svg)
+		background-size: 30px 30px
+		background-repeat: no-repeat
+
+.about
+	padding: 160px 0 35px 0
+	&-slider
+		padding-bottom: 26px
+		&-item
+			display: table !important
+			width: 100%
+			height: 500px
+			position: relative
+			background-color: #21272f
+			background-size: cover
+			background-position: center center
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				background-color: rgba(#21272f, .8)
+				position: absolute
+				top: 0
+				left: 0
+			&__info
+				display: table-cell
+				vertical-align: middle
+				position: relative
+				z-index: 1
+			&__ttl
+				font-family: OpenSans-Extrabold
+				font-size: 30px
+				color: $accent
+				text-align: center
+				margin-bottom: 40px
+			&__txt
+				font-family: OpenSans-Semibold
+				font-size: 18px
+				color: #fff
+				text-align: center
+
+.slick-dots
+	display: table
+	position: relative
+	list-style-type: none
+	margin: -50px auto 0
+	z-index: 2
+	li
+		display: block
+		float: left
+		margin: 0 4px
+		button
+			border: none
+			outline: none
+			font-size: 0
+			background-color: transparent
+			width: 16px
+			height: 16px
+			border-radius: 50%
+			border: 1px solid #fff
+		&.slick-active
+			button
+				background-color: #fff
+
+.about-second
+	padding: 35px 0
+	&-info
+		display: table
+		min-height: 500px
+		&__wrap
+			display: table-cell
+			vertical-align: middle
+		&__ttl
+			font-family: OpenSans-Extrabold
+			font-size: 30px
+			color: $accent
+			margin-bottom: 40px
+		&__txt
+			font-family: OpenSans-Semibold
+			font-size: 18px
+			line-height: 1.5
+			color: #262626
+	&-slider
+		padding-bottom: 26px
+		&__item
+			width: 100%
+			height: 500px
+			background-color: #21272f
+			box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.15)
+			background-size: cover
+			background-position: center center
+			margin-bottom: 7px
+
+.about-map
+	padding: 35px 0
+	&__ttl
+		font-family: OpenSans-Semibold
+		color: #262626
+		margin-bottom: 20px
+	&__txt
+		font-size: 14px
+	&__img
+		margin: 60px auto 30px 
+
+@import "_contacts"
+
+@media only screen and (max-width : 1199px)
+	.dropdown
+		max-width: 67px
+		float: right
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 20px
+	.cprt
+		margin-top: 20px
+
+@media only screen and (max-width : 991px)
+	.nav-mnu
+		&__li
+			margin-right: 25px
+	.head-call
+		padding-left: 0
+		background-image: none
+		&__txt
+			font-size: 12px
+		&__link
+			font-size: 12px
+	.about-second-info
+		min-height: 350px
+	.about-second-slider
+		&__item
+			height: 350px
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 6px
+				font-size: 12px
+
+@media only screen and (max-width : 767px) /*640*/
+	.main-nav
+		padding: 10px 0
+		&__logo
+			&_mini
+				margin: 0 auto 10px
+				max-width: 50px
+	.mob-menu
+		&__btn
+			cursor: pointer
+			width: 24px
+			height: 24px
+			background-image: url(../img/menu-button.svg)
+			background-size: 24px 24px
+	.nav-mnu
+		&__li
+			display: block
+			line-height: 1.8
+	.shop-cart
+		float: right
+		margin-right: 10px
+	.about-second-info
+		display: block
+		min-height: inherit
+		margin-bottom: 30px
+	.form-foot
+		&__btn
+			margin-bottom: 30px
+
+@media only screen and (max-width : 639px) /*320*/
+	.about-slider-item
+		height: 400px
+		&__info
+			padding: 0 15px
+		&__ttl
+			font-size: 24px
+		&__txt
+			font-size: 14px
+	.about-second-info
+		&__ttl
+			font-size: 26px
+		&__txt
+			font-size: 16px
+	.about-second-slider
+		&__item
+			height: 300px
+	.contact
+		&__ttl
+			font-size: 30px
+	.addr-quest
+		&__btn
+			margin-bottom: 30px

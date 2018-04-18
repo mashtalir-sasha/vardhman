@@ -1,0 +1,638 @@
+.scrollTop
+	cursor: pointer
+	position: fixed
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	z-index: 2
+	border-radius: 50%
+	background-color: $accent
+	box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 10px
+		left: 10px
+		background-image: url(../img/arrow_top.svg)
+		background-size: 30px 30px
+		background-repeat: no-repeat
+
+#content
+	padding-top: 125px
+
+.breadcrumbs
+	padding: 35px 0
+	&__item
+		font-family: $title-font
+		font-size: 24px
+		color: #292929
+		&_last
+			color: $accent
+	&__separator
+		margin: 0 20px
+
+.main-cart
+	position: relative
+	padding: 35px 0
+	background-color: #292e38
+	&:after
+		content: ''
+		width: 100%
+		height: 100%
+		background-image: url(../img/patern.png)
+		position: absolute
+		top: 0
+		left: 0
+	&-img
+		position: relative
+		z-index: 1
+		background-color: #fff
+		padding: 35px 0
+		text-align: center
+		&__img
+			max-width: 80%
+	&__ttl
+		position: relative
+		z-index: 1
+		font-family: OpenSans-Extrabold
+		color: #fff
+		font-size: 36px
+		margin-bottom: 40px
+	&__txt
+		position: relative
+		z-index: 1
+		max-width: 550px
+		font-family: $title-font
+		font-size: 14px
+		color: #fff
+		margin-bottom: 40px
+	&-find
+		&__btn
+			display: table
+			width: 210px
+			padding: 10px 0
+			float: right
+			position: relative
+			z-index: 1
+			background-color: #e95911
+			box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+			font-size: 14px
+			color: #fff
+			text-align: center
+			border-radius: 20px
+	&-btn
+		margin-top: 20px
+		&__price
+			display: table
+			min-width: 290px
+			position: relative
+			float: left
+			z-index: 2
+			color: #fff
+			font-size: 30px
+			text-align: center
+			&:before
+				content: ''
+				width: 100%
+				height: 120%
+				background-color: $accent
+				z-index: -1
+				position: absolute
+				top: -5%
+				left: 0
+		&__btn
+			display: table
+			width: 210px
+			padding: 10px 0
+			float: right
+			position: relative
+			z-index: 1
+			background-color: $accent
+			box-shadow: 0px 3px 2.7px 0.3px rgba(27, 117, 188, 0.25)
+			font-size: 14px
+			color: #fff
+			text-align: center
+			border-radius: 20px
+			transition: all ease .4s
+			&:after
+				content: ''
+				width: 24px
+				height: 24px
+				background-image: url(../img/plus.svg)
+				background-size: cover
+				position: absolute
+				top: 6px
+				right: 10px
+				visibility: hidden
+			&:hover
+				padding: 10px 40px 10px 30px
+			&:hover:after
+				visibility: visible
+	&__have
+		position: relative
+		z-index: 1
+		padding-left: 35px
+		font-size: 14px
+		color: #fff
+		line-height: 20px
+		margin-top: 20px
+		&:before
+			content: ''
+			width: 20px
+			height: 20px
+			background: #fff url(../img/have.svg) 4px 4px no-repeat
+			background-size: 12px 12px
+			border-radius: 50%
+			position: absolute
+			top: 0
+			left: 0
+	&__instruction
+		display: block
+		position: relative
+		z-index: 1
+		font-family: $title-font
+		font-size: 14px
+		color: #fff
+		text-decoration: underline
+		margin-top: 40px
+	&__stars
+		margin-bottom: 40px
+
+.add-cart
+	position: relative
+	z-index: 1
+	display: table
+	float: left
+	margin-left: 120px
+	border: 2px solid #fff
+	border-radius: 22px
+	padding: 10px 20px
+	overflow: hidden
+	&__numb
+		min-width: 20px
+		text-align: center
+		float: left
+		color: #fff
+		&_l
+			text-align: left
+			cursor: pointer
+		&_r
+			text-align: right
+			cursor: pointer
+
+.star
+	display: inline-block
+	margin: 0 2px
+	width: 16px
+	height: 16px
+	background-image: url(../img/star_white.svg)
+	background-size: cover
+	&_active
+		background-image: url(../img/star.svg)
+
+.tab-panel
+	position: relative
+	z-index: 1
+	display: table
+	margin: 0 auto 40px
+	list-style-type: none
+	li
+		cursor: pointer
+		display: inline-block
+		background-color: $accent
+		color: #fff
+		padding: 8px 30px
+		font-size: 14px
+		width: 135px
+		text-align: center
+		&:first-child
+			border-radius: 25px 0 0 25px
+		&:nth-child(2)
+			border-left: 1px solid #16619c
+			border-right: 1px solid #16619c
+		&:last-child
+			border-radius: 0 25px 25px 0
+		&.active
+			background-color: #16619c
+
+.tab-content
+	display: none
+	&.show
+		display: block
+
+.tab-table
+	width: 100%
+	position: relative
+	z-index: 1
+	font-family: $title-font
+	font-size: 14px
+	color: #fffefe
+
+.tab-text
+	font-family: $title-font
+	font-size: 14px
+	color: #fffefe
+
+.description
+	padding: 35px 0
+	&__ttl
+		font-family: OpenSans-Extrabold
+		font-size: 30px
+		text-align: center
+		text-transform: uppercase
+		color: $accent
+		margin-bottom: 40px
+	&__subttl
+		font-family: OpenSans-Semibold
+		font-size: 18px
+		color: #292929
+		margin-bottom: 40px
+	&__txt
+		max-height: 337px
+		padding-right: 15px
+		overflow-y: scroll
+		&::-webkit-scrollbar
+			width: 3px
+			background-color: #ececec
+		&::-webkit-scrollbar-thumb
+			display: block
+			width: 15px
+			background-color: $accent
+
+.benefits
+	position: relative
+	padding: 40px 100px
+	margin: 75px 0
+	background-color: #a0b8dc
+	border-bottom-right-radius: 130px
+	&__numb
+		font-family: OpenSans-Extrabold
+		font-size: 180px
+		line-height: 1
+		color: $accent
+		position: absolute
+		top: -95px
+		left: -40px
+	&__ttl
+		font-family: OpenSans-Extrabold
+		font-size: 36px
+		color: $accent
+		text-transform: uppercase
+		float: left
+		width: 360px
+		margin-right: 25px
+	&__list
+		float: left
+		width: 360px
+		list-style-type: none
+		margin: 26px 0
+		li
+			position: relative
+			padding-left: 15px
+			font-size: 18px
+			line-height: 1.8
+			color: #fff
+			&:before
+				content: ''
+				width: 4px
+				height: 4px
+				background-color: #fff
+				border-radius: 50%
+				position: absolute
+				top: 14px
+				left: 0
+
+.use
+	padding: 50px 0
+	background: url(../img/use_bg.jpg) top center no-repeat
+	position: relative
+	z-index: 1
+	&__ttl
+		position: relative
+		display: table
+		padding: 30px 30px 80px 30px
+		height: 300px
+		width: 300px
+		background-image: -moz-linear-gradient( 90deg, rgb(9,200,255) 0%, rgb(26,91,176) 100%)
+		background-image: -webkit-linear-gradient( 90deg, rgb(9,200,255) 0%, rgb(26,91,176) 100%)
+		background-image: -ms-linear-gradient( 90deg, rgb(9,200,255) 0%, rgb(26,91,176) 100%)
+		box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3)
+		border-radius: 50% 50%
+		margin: 0 auto 90px
+		.line_left
+			width: 73px
+			height: 296px
+			background-image: url(../img/use_line1.png)
+			position: absolute
+			top: 120px
+			left: -70px
+		.line_right
+			width: 75px
+			height: 297px
+			background-image: url(../img/use_line2.png)
+			position: absolute
+			top: 100px
+			right: -66px
+		span
+			display: table-cell
+			vertical-align: middle
+			font-family: OpenSans-Extrabold
+			font-size: 30px
+			text-transform: uppercase
+			text-align: center
+			color: #fff
+		&:after
+			content: ''
+			width: 50px
+			height: 50px
+			background-image: url(../img/use_ico.svg)
+			background-size: 50px 50px
+			position: absolute
+			bottom: 70px
+			left: 50%
+			margin-left: -25px
+
+.amount
+	position: relative
+	float: left
+	font-size: 12px
+	padding: 8px 60px 8px 16px
+	background-color: rgb(233, 233, 233)
+	box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.1)
+	border-radius: 16px 16px
+	margin-top: 20px
+	&:after
+		content: ''
+		width: 34px
+		height: 34px
+		background-image: url(../img/pils.svg)
+		background-size: 34px 34px
+		position: absolute
+		top: 11px
+		right: 11px
+
+.times
+	position: relative
+	display: table
+	float: right
+	border-radius: 50% 50%
+	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3)
+	background: rgba(9,202,255,1)
+	background: -moz-linear-gradient(top, rgba(9,202,255,1) 0%, rgba(9,202,255,0.5) 100%)
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(9,202,255,1)), color-stop(100%, rgba(9,202,255,0.5)))
+	background: -webkit-linear-gradient(top, rgba(9,202,255,1) 0%, rgba(9,202,255,0.5) 100%)
+	background: -o-linear-gradient(top, rgba(9,202,255,1) 0%, rgba(9,202,255,0.5) 100%)
+	background: -ms-linear-gradient(top, rgba(9,202,255,1) 0%, rgba(9,202,255,0.5) 100%)
+	background: linear-gradient(to bottom, rgba(9,202,255,1) 0%, rgba(9,202,255,0.5) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09caff', endColorstr='#09caff', GradientType=0 )
+	width: 110px
+	height: 110px
+	padding: 15px
+	margin-right: 50px
+	&__wrap
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+		font-family: OpenSans-Semibold
+		line-height: 1
+		color: #fff
+		span
+			font-size: 48px
+
+.vitamin
+	padding: 35px 0
+	&__ttl
+		font-family: OpenSans-Extrabold
+		font-size: 30px
+		text-transform: uppercase
+		text-align: center
+		color: $accent
+		margin-bottom: 75px
+	&__bg
+		position: absolute
+		&_1
+			width: 847px
+			height: 1117px
+			background-image: url(../img/vitamin_bg1.png)
+			right: -420px
+			top: -310px
+		&_2
+			width: 519px
+			height: 708px
+			background-image: url(../img/vitamin_bg2.png)
+			left: -350px
+			top: -75px
+	.container
+		position: relative
+
+.vitamin-item
+	position: relative
+	display: table
+	width: 470px
+	min-height: 70px
+	padding: 18px 55px 18px 95px 
+	background-color: #f9f9f9
+	box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.29)
+	border-radius: 35px 35px
+	margin-bottom: 25px
+	&:last-child
+		margin-bottom: 0
+	&__numb
+		position: absolute
+		top: -2px
+		left: -10px
+		display: table
+		width: 75px
+		height: 75px
+		background-color: #fff
+		border: 10px solid #6fcbed 
+		border-radius: 50% 50%
+		span
+			display: table-cell
+			vertical-align: middle
+			text-align: center
+			font-family: OpenSans-Semibold
+			font-size: 22px
+			color: $accent
+	&__txt
+		display: table-cell
+		vertical-align: middle
+		font-family: OpenSans-Semibold
+		font-size: 14px
+		color: $accent
+	&_1
+		float: right
+	&_2
+		float: right
+		margin-right: 28px
+	&_3
+		float: right
+		margin-right: 53px
+
+@import '_contacts'
+
+@media only screen and (max-width : 1199px)
+	.dropdown
+		max-width: 67px
+		float: right
+	.main-cart-btn
+		&__price
+			min-width: 220px
+	.add-cart
+		margin-left: 50px
+	.benefits
+		&__ttl
+			width: 355px
+	.times
+		margin-right: 75px
+	.vitamin-item
+		display: table
+		margin: 0 auto 20px
+		&_1
+			float: none
+		&_2
+			float: none
+			margin-right: auto
+		&_3
+			float: none
+			margin-right: auto
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 20px
+	.cprt
+		margin-top: 20px
+
+@media only screen and (max-width : 991px)
+	.nav-mnu
+		&__li
+			margin-right: 25px
+	.head-call
+		padding-left: 0
+		background-image: none
+		&__txt
+			font-size: 12px
+		&__link
+			font-size: 12px
+	.main-cart-btn
+		&__price
+			margin-bottom: 20px
+	.add-cart
+		margin-left: 0
+	.benefits
+		&__ttl
+			width: 250px
+			margin-right: 20px
+			font-size: 30px
+	.benefits
+		&__list
+			width: 250px
+			margin: 0
+			li
+				font-size: 16px
+	.line_left, .line_right
+		display: none
+	.use
+		&__ttl
+			margin-bottom: 30px
+	.times
+		margin-right: 0
+	.vitamin__bg
+		display: none
+	.foot
+		.nav-mnu
+			&__li
+				margin-right: 6px
+				font-size: 12px
+
+@media only screen and (max-width : 767px) /*640*/
+	.main-nav
+		padding: 10px 0
+		&__logo
+			&_mini
+				margin: 0 auto 10px
+				max-width: 50px
+	.mob-menu
+		&__btn
+			cursor: pointer
+			width: 24px
+			height: 24px
+			background-image: url(../img/menu-button.svg)
+			background-size: 24px 24px
+	.nav-mnu
+		&__li
+			display: block
+			line-height: 1.8
+	.shop-cart
+		float: right
+		margin-right: 10px
+	.breadcrumbs
+		&__item
+			font-size: 16px
+		&__separator
+			margin: 0 5px
+	.main-cart-img
+		margin-bottom: 30px
+	.add-cart
+		margin-left: 50px
+	.benefits
+		padding: 40px
+		&__numb
+			font-size: 130px
+			left: 0
+			top: -75px
+	.form-foot
+		&__btn
+			margin-bottom: 30px
+
+@media only screen and (max-width : 639px) /*320*/
+	.tab-panel
+		li
+			display: block
+			&:first-child
+				border-radius: 0
+			&:last-child
+				border-radius: 0
+	.main-cart
+		&__ttl
+			font-size: 30px
+	.main-cart-find
+		&__btn
+			float: none
+			margin: 0 auto
+	.main-cart-btn
+		&__price
+			float: none
+			margin: 0 auto 20px
+	.add-cart
+		float: none
+		margin: 0 auto 20px
+	.main-cart-btn
+		&__btn
+			float: none
+			margin: 0 auto
+	.description
+		&__subttl
+			font-size: 16px
+		&__txt
+			font-size: 14px
+	.benefits
+		&__ttl
+			margin-right: 0
+			margin-bottom: 20px
+			font-size: 28px
+	.vitamin-item
+		width: auto
+		border-radius: 0
+		margin-bottom: 50px
+		&__numb
+			top: -30px
+	.contact
+		&__ttl
+			font-size: 30px
+	.addr-quest
+		&__btn
+			margin-bottom: 30px
